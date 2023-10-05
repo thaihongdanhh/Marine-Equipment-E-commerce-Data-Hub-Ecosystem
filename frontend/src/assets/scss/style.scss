@@ -1,0 +1,383 @@
+// color variants
+@import 'themes-vars.module.scss';
+
+// third-party
+@import ' ~react-perfect-scrollbar/dist/css/styles.css';
+@import ' ~slick-carousel/slick/slick.css';
+@import ' ~slick-carousel/slick/slick-theme.css';
+
+@import ' ~react-18-image-lightbox/style.css';
+@import 'react-responsive-carousel/lib/styles/carousel.min.css';
+
+/* Sibling imports */
+@import './collapse.css';
+@import './deprecated.css';
+@import './deprecatedExtra.css';
+@import './tabbar.css';
+@import './icons.css';
+@import './iconsalt.css';
+@import './iconshover.css';
+@import './iframe.css';
+@import './hoverbox.css';
+@import './rjsfTemplates.css';
+@import './sidepanel.css';
+@import './spinner.css';
+@import './styling.css';
+@import './switch.css';
+@import './toolbar.css';
+@import './windowedlist.css';
+// ==============================|| LIGHT BOX ||============================== //
+.slick-arrow:before {
+    color: $grey500;
+}
+
+// ==============================|| LIGHT BOX ||============================== //
+.fullscreen .react-images__blanket {
+    z-index: 1200;
+}
+
+// ==============================|| APEXCHART ||============================== //
+
+.apexcharts-legend-series .apexcharts-legend-marker {
+    margin-right: 8px;
+}
+
+// ==============================|| PERFECT SCROLLBAR ||============================== //
+
+.scrollbar-container {
+    .ps__rail-y {
+        &:hover > .ps__thumb-y,
+        &:focus > .ps__thumb-y,
+        &.ps--clicking .ps__thumb-y {
+            background-color: $grey500;
+            width: 5px;
+        }
+    }
+    .ps__thumb-y {
+        background-color: $grey500;
+        border-radius: 6px;
+        width: 5px;
+        right: 0;
+    }
+}
+
+.scrollbar-container.ps,
+.scrollbar-container > .ps {
+    &.ps--active-y > .ps__rail-y {
+        width: 5px;
+        background-color: transparent !important;
+        z-index: 999;
+        &:hover,
+        &.ps--clicking {
+            width: 5px;
+            background-color: transparent;
+        }
+    }
+    &.ps--scrolling-y > .ps__rail-y,
+    &.ps--scrolling-x > .ps__rail-x {
+        opacity: 0.4;
+        background-color: transparent;
+    }
+}
+
+// ==============================|| ANIMATION KEYFRAMES ||============================== //
+
+@keyframes wings {
+    50% {
+        transform: translateY(-40px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes bounce {
+    0%,
+    20%,
+    53%,
+    to {
+        animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+        transform: translateZ(0);
+    }
+    40%,
+    43% {
+        animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+        transform: translate3d(0, -5px, 0);
+    }
+    70% {
+        animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+        transform: translate3d(0, -7px, 0);
+    }
+    80% {
+        transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+        transform: translateZ(0);
+    }
+    90% {
+        transform: translate3d(0, -2px, 0);
+    }
+}
+
+@keyframes slideY {
+    0%,
+    50%,
+    100% {
+        transform: translateY(0px);
+    }
+    25% {
+        transform: translateY(-10px);
+    }
+    75% {
+        transform: translateY(10px);
+    }
+}
+
+@keyframes slideX {
+    0%,
+    50%,
+    100% {
+        transform: translateX(0px);
+    }
+    25% {
+        transform: translateX(-10px);
+    }
+    75% {
+        transform: translateX(10px);
+    }
+}
+
+// ==============================|| ANIMATION KEYFRAMES ||============================== //
+
+.preBuildDashBoard-slider {
+    overflow: hidden;
+    .slider {
+        .slide {
+            opacity: 0.5;
+            display: flex;
+            justify-content: center;
+            .custom-slider {
+                gap: 40px;
+            }
+            &.selected {
+                opacity: 1;
+                .custom-slider {
+                    display: flex;
+                    flex-direction: column;
+                }
+            }
+            &:not(.selected) {
+                transform: scale(0.7);
+                transform-origin: top;
+            }
+        }
+    }
+}
+
+.project-info {
+    .project-slider {
+        .slick-list {
+            padding: 0 !important;
+        }
+    }
+    .slick-slide {
+        opacity: 0.05;
+    }
+    .slick-active {
+        opacity: 0.2;
+    }
+    .slick-current {
+        opacity: 1 !important;
+        .MuiTypography-root {
+            color: $primaryMain;
+        }
+    }
+}
+
+.ril__inner {
+    direction: ltr;
+}
+
+.ReactModal__Overlay {
+    z-index: 99999 !important;
+}
+
+// Jupyter lab 
+
+
+body {
+    color: var(--jp-ui-font-color1);
+    font-size: var(--jp-ui-font-size1);
+  }
+  
+  /* Disable native link decoration styles everywhere outside of dialog boxes */
+  a {
+    text-decoration: unset;
+    color: unset;
+  }
+  
+  a:hover {
+    text-decoration: unset;
+    color: unset;
+  }
+  
+  /* Accessibility for links inside dialog box text */
+  .jp-Dialog-content a {
+    text-decoration: revert;
+    color: var(--jp-content-link-color);
+  }
+  
+  .jp-Dialog-content a:hover {
+    text-decoration: revert;
+  }
+  
+  /* Styles for ui-components */
+  .jp-Button {
+    color: var(--jp-ui-font-color2);
+    border-radius: var(--jp-border-radius);
+    padding: 0 12px;
+    font-size: var(--jp-ui-font-size1);
+  
+    /* Copy from blueprint 3 */
+    display: inline-flex;
+    flex-direction: row;
+    border: none;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+    vertical-align: middle;
+    min-height: 30px;
+    min-width: 30px;
+  }
+  
+  .jp-Button:disabled {
+    cursor: not-allowed;
+  }
+  
+  .jp-Button:empty {
+    padding: 0 !important;
+  }
+  
+  .jp-Button.jp-mod-small {
+    min-height: 24px;
+    min-width: 24px;
+    font-size: 12px;
+    padding: 0 7px;
+  }
+  
+  /* Use our own theme for hover styles */
+  .jp-Button.jp-mod-minimal:hover {
+    background-color: var(--jp-layout-color2);
+  }
+  
+  .jp-Button.jp-mod-minimal {
+    background: none;
+  }
+  
+  .jp-InputGroup {
+    display: block;
+    position: relative;
+  }
+  
+  .jp-InputGroup input {
+    box-sizing: border-box;
+    border: none;
+    border-radius: 0;
+    background-color: transparent;
+    color: var(--jp-ui-font-color0);
+    box-shadow: inset 0 0 0 var(--jp-border-width) var(--jp-input-border-color);
+    padding-bottom: 0;
+    padding-top: 0;
+    padding-left: 10px;
+    padding-right: 28px;
+    position: relative;
+    width: 100%;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    font-size: 14px;
+    font-weight: 400;
+    height: 30px;
+    line-height: 30px;
+    outline: none;
+    vertical-align: middle;
+  }
+  
+  .jp-InputGroup input:focus {
+    box-shadow:
+      inset 0 0 0 var(--jp-border-width) var(--jp-input-active-box-shadow-color),
+      inset 0 0 0 3px var(--jp-input-active-box-shadow-color);
+  }
+  
+  .jp-InputGroup input:disabled {
+    cursor: not-allowed;
+    resize: block;
+    background-color: var(--jp-layout-color2);
+    color: var(--jp-ui-font-color2);
+  }
+  
+  .jp-InputGroup input:disabled ~ span {
+    cursor: not-allowed;
+    color: var(--jp-ui-font-color2);
+  }
+  
+  .jp-InputGroup input::placeholder,
+  input::placeholder {
+    color: var(--jp-ui-font-color2);
+  }
+  
+  .jp-InputGroupAction {
+    position: absolute;
+    bottom: 1px;
+    right: 0;
+    padding: 6px;
+  }
+  
+  .jp-HTMLSelect.jp-DefaultStyle select {
+    background-color: initial;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    color: var(--jp-ui-font-color0);
+    display: block;
+    font-size: var(--jp-ui-font-size1);
+    font-family: var(--jp-ui-font-family);
+    height: 24px;
+    line-height: 14px;
+    padding: 0 25px 0 10px;
+    text-align: left;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+  }
+  
+  .jp-HTMLSelect.jp-DefaultStyle select:disabled {
+    background-color: var(--jp-layout-color2);
+    color: var(--jp-ui-font-color2);
+    cursor: not-allowed;
+    resize: block;
+  }
+  
+  .jp-HTMLSelect.jp-DefaultStyle select:disabled ~ span {
+    cursor: not-allowed;
+  }
+  
+  /* Use our own theme for hover and option styles */
+  /* stylelint-disable-next-line selector-max-type */
+  .jp-HTMLSelect.jp-DefaultStyle select:hover,
+  .jp-HTMLSelect.jp-DefaultStyle select > option {
+    background-color: var(--jp-layout-color2);
+    color: var(--jp-ui-font-color0);
+  }
+  
+  select {
+    box-sizing: border-box;
+  }
+  

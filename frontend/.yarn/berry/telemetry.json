@@ -1,0 +1,34 @@
+{
+  "lastUpdate": 1695991706407,
+  "blocks": {
+    "*": {
+      "values": {
+        "version": [
+          "3.6.3"
+        ],
+        "commandName": [
+          "-v",
+          "add",
+          "set version",
+          "<none>"
+        ],
+        "workspaceCount": [
+          "1"
+        ],
+        "dependencyCount": [
+          "106"
+        ]
+      },
+      "hits": {
+        "installCount": {
+          "node-modules": 1
+        }
+      },
+      "enumerators": {
+        "projectCount": [
+          "f0a5986846495ebb3f39b77ea1ca27177ea9c126dbc984974d7c8805113bc15f8b1803d8dd489050d3e773cfe2e8fb22d489bee973a3b33777d81b4e29d06516"
+        ]
+      }
+    }
+  }
+}
